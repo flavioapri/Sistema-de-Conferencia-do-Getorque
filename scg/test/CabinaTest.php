@@ -1,5 +1,5 @@
 <?php
-require_once 'class/Cabina.php';
+require_once '../src/class/Cabina.php';
 
 use PHPUnit\Framework\TestCase;
 

@@ -1,5 +1,5 @@
 <?php
-require_once '../class/PosicaoDosApertos.php';
+require_once '../src/class/PosicaoDosApertos.php';
 
 use PHPUnit\Framework\TestCase;
 

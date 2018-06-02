@@ -1,6 +1,6 @@
 <?php
-require_once 'class/Cabina.php';
-require_once 'class/Constantes.php';
+require_once 'src/class/modelo/Cabina.php';
+require_once 'src/class/constantes/Constantes.php';
 
 /**
  * Classe geradora de cabinas para os testes.

@@ -1,5 +1,5 @@
 <?php
-require_once 'class/RegistroDeAperto.php';
+require_once 'src/class/modelo/RegistroDeAperto.php';
 class GeradorDeListaDeRegistroDeApertos {
 
 	static public function gerar() {

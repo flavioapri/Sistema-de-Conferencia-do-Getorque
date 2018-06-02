@@ -1,7 +1,7 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
-require_once 'class/ItemDeVerificacao.php';
-require_once 'class/Constantes.php';
+require_once 'src/class/modelo/ItemDeVerificacao.php';
+require_once 'src/class/constantes/Constantes.php';
 
 class Cabina {
 	private $np;

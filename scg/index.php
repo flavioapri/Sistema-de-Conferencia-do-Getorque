@@ -1,10 +1,10 @@
 <?php
-require_once 'class/GeradorDeListaDeCabinas.php';
-require_once 'class/GeradorDeListaDeRegistroDeApertos.php';
-require_once 'class/RegistroDeAperto.php';
-require_once 'class/TipoDeApertoDAO.php';
-require_once 'class/ItemDeVerificacao.php';
-require_once 'class/ConferenteDeRegistrosDeAperto.php';
+require_once 'src/class/logica/GeradorDeListaDeCabinas.php';
+require_once 'src/class/logica/GeradorDeListaDeRegistroDeApertos.php';
+require_once 'src/class/modelo/RegistroDeAperto.php';
+require_once 'src/class/dao/TipoDeApertoDAO.php';
+require_once 'src/class/modelo/ItemDeVerificacao.php';
+require_once 'src/class/logica/ConferenteDeRegistrosDeAperto.php';
 require_once 'src/conecta.php';
 
 $listaDeCabinas = GeradorDeListaDeCabinas::gerar();

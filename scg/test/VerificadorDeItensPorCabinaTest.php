@@ -1,8 +1,8 @@
 <?php
-require_once 'class/Constantes.php';
-require_once 'class/Cabina.php';
-require_once 'class/VerificadorDeItensPorCabina.php';
-require_once 'class/CabinaFactory.php';
+require_once 'src/class/constantes/Constantes.php';
+require_once 'src/class/modelo/Cabina.php';
+require_once 'src/class/logica/VerificadorDeItensPorCabina.php';
+require_once 'src/class/factory/CabinaFactory.php';
 
 use PHPUnit\Framework\TestCase;
 

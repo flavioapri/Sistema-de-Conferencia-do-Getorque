@@ -1,5 +1,5 @@
 <?php
-require_once 'Cabina.php';
+require_once 'src/class/modelo/Cabina.php';
 class GeradorDeListaDeCabinas {
 
 	static public function gerar() {

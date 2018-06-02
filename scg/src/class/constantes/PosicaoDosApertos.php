@@ -1,5 +1,5 @@
 <?php
-require_once 'class/Cabina.php';
+require_once 'src/class/modelo/Cabina.php';
 
 class PosicaoDosApertos {
 	const SUSP_FRONTAL_ATEGO_LE = 4;
