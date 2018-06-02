@@ -1,0 +1,107 @@
+ID	Gerência - CC	Nome	Processo	Programa	Versão	Data e Hora	Ciclo	Fuso	Torque	Ângulo	Status	FZ	Identificador
+13330	OCB - 206.4	Coluna de Direção NTC	Cruzeta ATEGO - Atual	3	4	25/11/2017 13:04	1	1	31,02	81	OK	521266	373738322
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	27/11/2017 07:09	2	1	12	37	OK	521266	373738322
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	27/11/2017 07:09	2	1	12	37	OK	521266	373738322
+-	OCP - 204.4	GE PM Suspensao Global Atego	Suspensão Global Pino e Porca (4 apertos)- Atual	1	4	27/11/2017 06:17	4	1	228	27	OK	521266	373738322
+-	OCP - 204.4	GE PM Suspensao Global Atego	Suspensão Global Pino e Porca (4 apertos)- Atual	1	4	27/11/2017 06:17	3	1	225	22	OK	521266	373738322
+-	OCP - 204.4	GE PM Suspensao Global Atego	Suspensão Global Pino e Porca (4 apertos)- Atual	1	4	27/11/2017 06:16	2	1	227	12	OK	521266	373738322
+-	OCP - 204.4	GE PM Suspensao Global Atego	Suspensão Global Pino e Porca (4 apertos)- Atual	1	4	27/11/2017 06:16	1	1	225	11	OK	521266	373738322
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:34	4	1	17,5	23	OK	521266	373738322
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:34	3	1	18,25	34	OK	521266	373738322
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:34	2	1	17,53	35	OK	521266	373738322
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:34	1	1	17,25	10	OK	521266	373738322
+9162	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Atego	2	2	27/11/2017 07:14	2	1	106,2	73	OK	521266	373738322
+9161	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Atego	2	2	27/11/2017 07:14	1	1	106,9	34	OK	521266	373738322
+82711	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Atego	2	2	27/11/2017 07:14	2	1	106,6	35	OK	521266	373738322
+82710	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Atego	2	2	27/11/2017 07:14	1	1	106,6	25	OK	521266	373738322
+9160	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Atego	1	2	27/11/2017 07:13	3	1	172,4	68	OK	521266	373738322
+9159	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Atego	1	2	27/11/2017 07:13	2	1	172,5	112	OK	521266	373738322
+82709	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Atego	1	3	27/11/2017 07:13	3	1	174,3	64	OK	521266	373738322
+9158	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Atego	1	2	27/11/2017 07:13	1	1	172,1	54	OK	521266	373738322
+82708	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Atego	1	3	27/11/2017 07:13	2	1	172,1	81	OK	521266	373738322
+82708	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Atego	1	3	27/11/2017 07:13	2	1	172,1	81	OK	521266	373738322
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Console no suporte da Pedaleira - 7 - ATUAL	7	4	30/11/2017 18:38	8	1	21,16	40	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Console no suporte da Pedaleira - 7 - ATUAL	7	4	30/11/2017 18:38	7	1	21,06	4	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Console no suporte da Pedaleira - 7 - ATUAL	7	4	30/11/2017 18:38	6	1	21,18	18	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Console no suporte da Pedaleira - 7 - ATUAL	7	4	30/11/2017 18:38	5	1	21,62	0	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Valvula no Suporte - ATUAL	5	2	30/11/2017 18:37	4	1	18,46	2	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Valvula no Suporte - ATUAL	5	2	30/11/2017 18:37	3	1	18,62	6	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Valvula no Suporte - ATUAL	5	2	30/11/2017 18:37	2	1	18,51	2	OK	522122	373773048
+-	OCB - 206.4	Pedaleira Accelo Pr.41 Porao	Valvula no Suporte - ATUAL	5	2	30/11/2017 18:37	1	1	18,38	1	OK	522122	373773048
+10997	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Accelo	7	3	30/11/2017 22:37	3	1	106,8	29	OK	522122	373773048
+10996	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Accelo	7	3	30/11/2017 22:37	2	1	106,3	35	OK	522122	373773048
+10995	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Accelo	7	3	30/11/2017 22:37	1	1	106,8	35	OK	522122	373773048
+10994	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Accelo	8	2	30/11/2017 22:37	1	1	172,3	61	OK	522122	373773048
+84484	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Accelo	7	2	30/11/2017 22:36	3	1	107,9	46	OK	522122	373773048
+84483	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Accelo	7	2	30/11/2017 22:36	2	1	109,5	73	OK	522122	373773048
+84482	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Accelo	7	2	30/11/2017 22:36	1	1	106,4	33	OK	522122	373773048
+84481	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Accelo	8	2	30/11/2017 22:36	1	1	172,6	98	OK	522122	373773048
+13332	OCB - 206.4	Coluna de Direção NTC	Cruzeta AXOR C - Atual	48	2	25/11/2017 13:08	1	1	29,24	81	OK	520988	373623208
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	27/11/2017 07:25	2	1	12,04	41	OK	520988	373623208
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	27/11/2017 07:25	1	1	12,18	38	OK	520988	373623208
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:40	4	1	17,33	21	OK	520988	373623208
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:40	3	1	17,64	20	OK	520988	373623208
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:40	2	1	17,97	33	OK	520988	373623208
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	25/11/2017 14:40	1	1	18,07	14	OK	520988	373623208
+62265	OCP - 204.4	GE MI Cilindro de Basculamento	Cilindro de Basculamento	1	2	27/11/2017 07:21	1	1	17,97	6	OK	520988	373623208
+62264	OCP - 204.4	GE MI Cilindro de Basculamento	Cilindro de Basculamento	1	2	27/11/2017 07:21	1	1	18,18	1	NOK	520988	373623208
+19921	OCP - 204.4	GE MI Pedaleira Axor	Reaperto do Parafuso da Pedaleira	2	1	27/11/2017 06:51	1	1	25,16	10	OK	520988	373623208
+19920	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	6	1	25,12	53	OK	520988	373623208
+19919	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	5	1	25,15	52	OK	520988	373623208
+19918	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	4	1	25,3	23	OK	520988	373623208
+19917	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	3	1	25,2	13	OK	520988	373623208
+19916	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	2	1	25,01	38	OK	520988	373623208
+19915	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	1	1	25,39	66	OK	520988	373623208
+-	OCP - 204.4	GE PM Suspensão AXOR FL4	MultiEtapa (150±12Nm)+(90°) - Atual	2	6	25/11/2017 11:42	2	1	151	90	OK	520988	373623208
+-	OCP - 204.4	GE PM Suspensão AXOR FL4	MultiEtapa (150±12Nm)+(90°) - Atual	2	6	25/11/2017 11:42	1	1	150	90	OK	520988	373623208
+-	OCP - 204.4	GE PM Suspensão Axor FL4 LD	MultiEtapa (225±45Nm)+(90°) - Atual	2	5	25/11/2017 11:41	1	1	225,5	90	OK	520988	373623208
+-	OCP - 204.4	GE PM Suspensao Axor FL4 LE	MultiEtapa (225±45Nm)+(90°) - Atual	2	5	25/11/2017 11:41	1	1	225,8	90	OK	520988	373623208
+9175	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	3	27/11/2017 07:45	5	1	93,03	45	OK	520988	373623208
+9174	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	3	27/11/2017 07:45	4	1	92,69	45	OK	520988	373623208
+9173	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	3	27/11/2017 07:44	3	1	92,24	45	OK	520988	373623208
+9172	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	3	27/11/2017 07:44	2	1	92,13	45	OK	520988	373623208
+9171	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	3	27/11/2017 07:44	1	1	93,14	45	OK	520988	373623208
+82723	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	5	27/11/2017 07:44	4	1	92,05	45	OK	520988	373623208
+82722	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	5	27/11/2017 07:44	3	1	92,17	45	OK	520988	373623208
+82721	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	5	27/11/2017 07:44	2	1	92,17	45	OK	520988	373623208
+82720	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL4/FL2 MultiEtapa	4	5	27/11/2017 07:44	1	1	92,05	45	OK	520988	373623208
+9170	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	3	27/11/2017 07:43	3	1	150,1	45	OK	520988	373623208
+82719	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	5	27/11/2017 07:43	3	1	150,9	45	OK	520988	373623208
+9169	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	3	27/11/2017 07:43	2	1	151,4	45	OK	520988	373623208
+82718	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	5	27/11/2017 07:43	2	1	150,4	45	OK	520988	373623208
+9168	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	3	27/11/2017 07:43	1	1	150,3	45	OK	520988	373623208
+82717	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL4/FL2 MultiEtapa	3	5	27/11/2017 07:43	1	1	150,3	45	OK	520988	373623208
+10923	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL6 MultiEtapa	10	1	30/11/2017 18:46	4	1	92,47	45	OK	522147	373748546
+10922	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL6 MultiEtapa	10	1	30/11/2017 18:46	3	1	69,41	20	OK	522147	373748546
+10921	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL6 MultiEtapa	10	1	30/11/2017 18:46	2	1	92,0	45	OK	522147	373748546
+10920	OCP - 204.4	GE MI Suspensao LE	Suspensão Frontal Axor FL6 MultiEtapa	10	1	30/11/2017 18:46	1	1	92,69	45	OK	522147	373748546
+84417	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL6 MultiEtapa	10	0	30/11/2017 18:45	3	1	92,4	45	OK	522147	373748546
+84416	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL6 MultiEtapa	10	0	30/11/2017 18:45	2	1	92,63	45	OK	522147	373748546
+84415	OCP - 204.4	GE MI Suspensao LD	Suspensão Frontal Axor FL6 MultiEtapa	10	0	30/11/2017 18:45	1	1	92,98	45	OK	522147	373748546
+10918	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	3	1	151,2	44	OK	522147	373748546
+84414	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	3	1	150,8	45	OK	522147	373748546
+10917	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	2	1	150,2	45	OK	522147	373748546
+84413	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	2	1	150	45	OK	522147	373748546
+10916	OCP - 204.4	GE MI Suspensao LE	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	1	1	151,4	45	OK	522147	373748546
+84412	OCP - 204.4	GE MI Suspensao LD	Suspensão Interna Axor FL6 MultiEtapa	9	0	30/11/2017 18:44	1	1	150,8	45	OK	522147	373748546
+-	OCP - 204.4	GE PM Suspensão AXOR FL6	AXOR code FL6 (2 apertos)- Atual	1	5	30/11/2017 13:31	1	1	171,2	18	OK	522147	373748546
+-	OCP - 204.4	GE PM Suspensão AXOR FL6	AXOR code FL6 (2 apertos)- Atual	1	5	30/11/2017 13:31	1	1	171,2	18	OK	522147	373748546
+13541	OCB - 206.4	Coluna de Direção NTC	Cruzeta AXOR R - Atual	12	3	30/11/2017 13:33	1	1	29,28	83	OK	522147	373748546
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	30/11/2017 06:26	4	1	17,6	16	OK	522147	373748546
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	30/11/2017 06:26	3	1	17,82	39	OK	522147	373748546
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	30/11/2017 06:26	2	1	17,85	52	OK	522147	373748546
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Válvula de Freio NTC - Porca (4 apertos) - Atual	1	5	30/11/2017 06:26	1	1	17,46	9	OK	522147	373748546
+62330	OCP - 204.4	GE MI Cilindro de Basculamento	Cilindro de Basculamento	1	2	30/11/2017 18:15	1	1	18,06	14	OK	522147	373748546
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	30/11/2017 18:00	2	1	12,15	35	OK	522147	373748546
+-	OCB - 206.4	Cabo massa (LP)	APERTO CABO MASSA ( NTC ) - Atual	1	12	30/11/2017 18:00	1	1	12,04	34	OK	522147	373748546
+19921	OCP - 204.4	GE MI Pedaleira Axor	Reaperto do Parafuso da Pedaleira	2	1	27/11/2017 06:51	1	1	25,16	10	OK	520988	373748546
+19920	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	6	1	25,12	53	OK	520988	373748546
+19919	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	5	1	25,15	52	OK	520988	373748546
+19918	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	4	1	25,3	23	OK	520988	373748546
+19917	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	3	1	25,2	13	OK	520988	373748546
+19916	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	2	1	25,01	38	OK	520988	373748546
+19915	OCP - 204.4	GE MI Pedaleira Axor	Pedaleira Axor	1	2	27/11/2017 06:51	1	1	25,39	66	OK	520988	373748546
+-	OCB - 206.4	Coluna de Direção SÉRIE	Fixação da Cruzeta SKL (2 apertos) - Atual	3	6	27/11/2017 09:00	1	1	29,33	74	OK	1847	373691925
+-	OCB - 206.4	Coluna de Direção SÉRIE	Fixação da Cruzeta SKL (2 apertos) - Atual	3	6	27/11/2017 09:00	1	1	29,33	74	OK	1847	373691925
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Pedal Acelerador Atron	3	6	27/11/2017 08:06	2	1	20,05	38	OK	1847	373691925
+-	OCB - 206.4	Pedaleira Dupla - Embreagem	Pedal Acelerador Atron	3	6	27/11/2017 08:06	1	1	20,12	33	OK	1847	373691925

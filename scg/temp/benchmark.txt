@@ -1,0 +1,2 @@
+﻿Ler do arquivo e salvar dados no banco A p�gina demorou 553 segundos para carregar.
+Buscar dados no banco e realizar a conferencia A página demorou 649 segundos para carregar.
