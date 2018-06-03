@@ -3,80 +3,62 @@ require_once 'src/class/constantes/Constantes.php';
 require_once 'src/class/logica/VerificadorDeItensPorCabina.php';
 
 class ConferenteDeRegistrosDeAperto {
-	private $listaDeCabinas;
-	private $listaDeRegistrosDeAperto;
-	private $tiposDeAperto;
-	private $confirmacoes;
-	private $verificadorDeItensPorCabina;
-	private $listaDeCabinasVerificadas;
-	private $ocorrencia;
 
-	function __construct($listaDeCabinas, $listaDeRegistrosDeAperto, $tiposDeAperto) {
-		$this->listaDeCabinas = $listaDeCabinas;
-		$this->listaDeRegistrosDeAperto = $listaDeRegistrosDeAperto;
-		$this->tiposDeAperto = $tiposDeAperto;
-		$this->confirmacoes = array();
-		$this->verificadorDeItensPorCabina = new VerificadorDeItensPorCabina();
-		$this->listaDeCabinasVerificadas = array();
-		$this->ocorrencia;
-	}
-
-	public function conferir() {
-		foreach($this->listaDeCabinas as $cabina) {
-			foreach($this->tiposDeAperto as $tipoDeAperto) {
-				if($cabina->getBaumuster() !== $tipoDeAperto->getBaumuster()) {
+	public function conferir(array $listaDeCabinas, array $listaDeRegistrosDeAperto, array $tiposDeAperto) {
+		$verificadorDeItensPorCabina = new VerificadorDeItensPorCabina();
+		$listaDeCabinasVerificadas = array();
+		$confirmacoes = array();
+		$ocorrencia = NULL;
+		
+		foreach($listaDeCabinas as $cabina) {
+			foreach($tiposDeAperto as $tipoDeAperto) {
+				if($cabina->getBaumuster() !== $tipoDeAperto->getBaumuster())
 					continue;
-				}
 				$contador = 0;
-				foreach($this->listaDeRegistrosDeAperto as $registroDeAperto) {
-					if($registroDeAperto->getIdentificador() === $cabina->getNpFormatado()) {
-						
-						if($tipoDeAperto->getNome() === $registroDeAperto->getNome() && $tipoDeAperto->getProcesso() === $registroDeAperto->getProcesso()) {
-							
-							if($registroDeAperto->getStatus() === Constantes::CONFIRMACAO) {
+				foreach($listaDeRegistrosDeAperto as $registroDeAperto)
+					if($registroDeAperto->getIdentificador() === $cabina->getNpFormatado())
+						if($tipoDeAperto->getNome() === $registroDeAperto->getNome() &&
+						$tipoDeAperto->getProcesso() === $registroDeAperto->getProcesso())
+							if($registroDeAperto->getStatus() === Constantes::CONFIRMACAO)
 								$contador++;
-							}
-						}
-					}
-				}
-				$this->verificarQtdDeApertosConfirmados($contador, $tipoDeAperto);
-				$this->registrarOcorrencia($contador, $tipoDeAperto);
+				
+				$confirmacao = $this->verificarQtdDeApertosConfirmados($contador, $tipoDeAperto);
+				array_push($confirmacoes, $confirmacao);
+				$ocorrencia .= $this->registrarOcorrencia($contador, $tipoDeAperto);
 			}
 			
-			$cabina->setConfirmacoesDosApertos($this->confirmacoes);
-			$cabina->getItemDeVerificacao()->setOcorrencia($this->ocorrencia);
-			print_r(array_values($this->confirmacoes));
+			$cabina->setConfirmacoesDosApertos($confirmacoes);
+			$cabina->getItemDeVerificacao()->setOcorrencia($ocorrencia);
+			print_r(array_values($confirmacoes));
 			echo "</br>";
-			unset($GLOBALS['confirmacoes']);
-			$this->confirmacoes = array();
-			array_push($this->listaDeCabinasVerificadas, $cabina);
+			$confirmacoes = array();
+			array_push($listaDeCabinasVerificadas, $cabina);
 		}
 		
 		$lista = array();
 		
-		foreach($this->listaDeCabinasVerificadas as $cabina) {
-		    $cabina = $this->verificadorDeItensPorCabina->verificar($cabina);
-		    array_push($lista, $cabina);
-		    echo " " . $cabina;
+		foreach($listaDeCabinasVerificadas as $cabina) {
+			$cabina = $verificadorDeItensPorCabina->verificar($cabina);
+			array_push($lista, $cabina);
+			echo " " . $cabina;
 			echo "</br>";
 		}
 	}
 
-	private function verificarQtdDeApertosConfirmados($contador, $tipoDeAperto) {
+	private function verificarQtdDeApertosConfirmados($contador, TipoDeAperto $tipoDeAperto) {
 		if($contador == $tipoDeAperto->getQtdApertos())
-			array_push($this->confirmacoes, Constantes::CONFIRMACAO);
+			return Constantes::CONFIRMACAO;
 		else
-			array_push($this->confirmacoes, Constantes::NEGACAO);
+			return Constantes::NEGACAO;
 	}
 
-	private function registrarOcorrencia($contador, $tipoDeAperto) {
+	private function registrarOcorrencia($contador, TipoDeAperto $tipoDeAperto) {
 		if($contador > $tipoDeAperto->getQtdApertos())
-			$this->ocorrencia .= "Apertos adicionais/ ";
-		else if($contador < $tipoDeAperto->getQtdApertos())
-			if($contador === 0)
-				$this->ocorrencia .= "Sem registro de aperto/ ";
-			else
-				$this->ocorrencia .= "Faltam registros de aperto/ ";
+			return "Apertos adicionais/ ";
+		else if($contador < $tipoDeAperto->getQtdApertos() && $contador > 0)
+			return "Faltam registros de aperto/ ";
+		else if($contador === 0)
+			return "Sem registro de aperto/ ";
 	}
 }
 

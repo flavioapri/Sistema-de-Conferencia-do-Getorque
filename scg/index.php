@@ -15,6 +15,7 @@ $tiposDeApertoDAO = new TipoDeApertoDAO($conexao);
 
 $tiposDeAperto = $tiposDeApertoDAO->listarTiposDeApertoComBaumuster();
 
-$conferente = new ConferenteDeRegistrosDeAperto($listaDeCabinas, $listaDeRegistrosDeAperto, $tiposDeAperto);
-$conferente->conferir();
+$conferente = new ConferenteDeRegistrosDeAperto();
+
+$conferente->conferir($listaDeCabinas, $listaDeRegistrosDeAperto, $tiposDeAperto);
 

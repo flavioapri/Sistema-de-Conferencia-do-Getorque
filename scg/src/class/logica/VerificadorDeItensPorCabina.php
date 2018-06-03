@@ -1,11 +1,14 @@
 <?php
 require_once 'src/class/constantes/Constantes.php';
 require_once 'src/class/modelo/Cabina.php';
-require_once 'src/class/constantes/PosicaoDosApertos.php';
+require_once 'src/class/constantes/Apertos.php';
 
+/**
+ * Verifica os itens de conferência de acordo com as verificações feitas aperto por aperto pela classe
+ * ConferenteDeRegistrosDeAperto.
+ */
 class VerificadorDeItensPorCabina {
 
-	// TODO Criar constantes para as posições dos apertos
 	public function verificar(Cabina $cabina) {
 		return $this->verificarCruzeta($cabina);
 	}
@@ -16,53 +19,43 @@ class VerificadorDeItensPorCabina {
 		if($cabina->isAtron() && $cabina->getPais() !== Constantes::BRASIL)
 			return $this->verificarCaboMassa($cabina);
 		
-		$posicaoNoArray = 0; // Posição do aperto da cruzeta no array de confirmações
-		$cabina->getItemDeVerificacao()->setCruzeta($this->confirmar($cabina, $posicaoNoArray));
+		$cabina->getItemDeVerificacao()->setCruzeta($this->confirmar($cabina, Apertos::POSICAO_CRUZETA));
 		return $this->verificarCaboMassa($cabina);
 	}
 
 	private function verificarCaboMassa(Cabina $cabina) {
-		if($cabina->isNTC()) {
-			$posicaoNoArray = 1; // Posição do aperto do cabo massa no array de confirmações
-			$cabina->getItemDeVerificacao()->setCaboMassa($this->confirmar($cabina, $posicaoNoArray));
-		}
+		if($cabina->isNTC())
+			$cabina->getItemDeVerificacao()->setCaboMassa($this->confirmar($cabina, Apertos::POSICAO_CABO_MASSA));
 		return $this->verificarValvulaNTC($cabina);
 	}
 
 	private function verificarValvulaNTC(Cabina $cabina) {
-		if($cabina->isNTC()) {
-			$posicaoNoArray = 2; // Posição do aperto da válvula da pedaleira NTC no array de confirmações
-			$cabina->getItemDeVerificacao()->setValvulaNTC($this->confirmar($cabina, $posicaoNoArray));
-		}
+		if($cabina->isNTC())
+			$cabina->getItemDeVerificacao()->setValvulaNTC($this->confirmar($cabina, Apertos::POSICAO_VALVULA_NTC));
 		return $this->verificarValvulaNoSuporte($cabina);
 	}
 
 	private function verificarValvulaNoSuporte(Cabina $cabina) {
-		if($cabina->isAccelo()) {
-			$posicaoNoArray = 0;
-			$cabina->getItemDeVerificacao()->setValvulaLTC($this->confirmar($cabina, $posicaoNoArray));
-		}
+		if($cabina->isAccelo())
+			$cabina->getItemDeVerificacao()->setValvulaLTC(
+														$this->confirmar($cabina, Apertos::POSICAO_VALVULA_SUPORTE));
 		return $this->verificarConsoleNoSuporte($cabina);
 	}
 
 	private function verificarConsoleNoSuporte(Cabina $cabina) {
-		if($cabina->isAccelo()) {
-			$posicaoNoArray = 1;
-			$cabina->getItemDeVerificacao()->setConsoleLTC($this->confirmar($cabina, $posicaoNoArray));
-		}
+		if($cabina->isAccelo())
+			$cabina->getItemDeVerificacao()->setConsoleLTC(
+														$this->confirmar($cabina, Apertos::POSICAO_CONSOLE_SUPORTE));
 		return $this->verificarPedaleiraAxor($cabina);
 	}
 
 	private function verificarPedaleiraAxor(Cabina $cabina) {
 		if($cabina->isAxor()) {
-			$verificacaoDos6Apertos;
 			$verificacaoDoReaperto;
-			$posicaoDos6ApertosNoArray = 3;
-			$posicaoDoReapertoNoArray = 4;
-			$verificacaoDos6Apertos = $this->confirmar($cabina, $posicaoDos6ApertosNoArray);
+			$verificacaoDos6ApertosDaPedaleira = $this->confirmar($cabina, Apertos::POSICAO_PEDALEIRA_AXOR);
 			
-			if($verificacaoDos6Apertos === Constantes::CONFIRMACAO)
-				$verificacaoDoReaperto = $this->confirmar($cabina, $posicaoDoReapertoNoArray);
+			if($verificacaoDos6ApertosDaPedaleira === Constantes::CONFIRMACAO)
+				$verificacaoDoReaperto = $this->confirmar($cabina, Apertos::POSICAO_REAPERTO_PEDAL_AXOR);
 			else
 				$verificacaoDoReaperto = Constantes::NEGACAO;
 			$cabina->getItemDeVerificacao()->setPedaleiraAxor($verificacaoDoReaperto);
@@ -71,32 +64,26 @@ class VerificadorDeItensPorCabina {
 	}
 
 	private function verificarCilindro(Cabina $cabina) {
-		if($cabina->isAxor()) {
-			$posicaoDoApertoNoArray = 5;
-			$cabina->getItemDeVerificacao()->setCilindro($this->confirmar($cabina, $posicaoDoApertoNoArray));
-		}
+		if($cabina->isAxor())
+			$cabina->getItemDeVerificacao()->setCilindro($this->confirmar($cabina, Apertos::POSICAO_CILINDRO));
 		return $this->verificarPreSuspensaoAtego($cabina);
 	}
 
 	private function verificarPreSuspensaoAtego(Cabina $cabina) {
-		if($cabina->isAtego()) {
-			$posicaoDoApertoNoArray = 3;
-			$cabina->getItemDeVerificacao()->setPreSuspensao($this->confirmar($cabina, $posicaoDoApertoNoArray));
-		}
+		if($cabina->isAtego())
+			$cabina->getItemDeVerificacao()->setPreSuspensao(
+															$this->confirmar($cabina,
+																			Apertos::POSICAO_PRE_SUSP_ATEGO));
 		return $this->verificarPreSuspensaoAxor($cabina);
 	}
 
 	private function verificarPreSuspensaoAxor(Cabina $cabina) {
 		$verificacoes = array();
 		if($cabina->isAxor()) {
-			$posicaoDoApertoLE = 6;
-			$posicaoDoApertoLD = 7;
-			$posicaoDosApertos150Nm = 8;
-			
-			array_push($verificacoes, $this->confirmar($cabina, $posicaoDoApertoLE));
-			array_push($verificacoes, $this->confirmar($cabina, $posicaoDoApertoLD));
-			array_push($verificacoes, $this->confirmar($cabina, $posicaoDosApertos150Nm));
-			
+			array_push($verificacoes, $this->confirmar($cabina, Apertos::POSICAO_PRE_LE_AXOR));
+			array_push($verificacoes, $this->confirmar($cabina, Apertos::POSICAO_PRE_LD_AXOR));
+			array_push($verificacoes, $this->confirmar($cabina, Apertos::POSICAO_PRE_150NM_AXOR));
+			// Se houver algum tipo de aperto não confirmado no array a conferência do item deve ser NOK
 			if(!in_array(Constantes::NEGACAO, $verificacoes))
 				$cabina->getItemDeVerificacao()->setPreSuspensao(Constantes::CONFIRMACAO);
 			else
@@ -110,9 +97,8 @@ class VerificadorDeItensPorCabina {
 	 * manualmente em alguns casos o aperto da suspensão FL6
 	 */
 	private function verificarPreSuspensaoAxorFL6(Cabina $cabina, $verificacoes) {
-		$posicaoDosApertos = 9;
 		if($cabina->isAxor()) {
-			if($cabina->getConfirmacoesDosApertos()[$posicaoDosApertos] === Constantes::CONFIRMACAO) {
+			if($cabina->getConfirmacoesDosApertos()[Apertos::POSICAO_PRE_AXOR_FL6] === Constantes::CONFIRMACAO) {
 				$cabina->getItemDeVerificacao()->setPreSuspensaoFL6(Constantes::CONFIRMACAO);
 				$cabina->getItemDeVerificacao()->setPreSuspensao(Constantes::SEM_APLICACAO);
 			}
@@ -123,13 +109,18 @@ class VerificadorDeItensPorCabina {
 		return $this->verificarSuspensao($cabina);
 	}
 
+	/**
+	 * Extrai das confirmações dos apertos da cabina um array somente com as posições dos apertos de suspensão
+	 * e gera ou novo array com as confirmações para cada aperto.
+	 * Se o array não conter apertos que estão como NOK confirma o item.
+	 */
 	private function verificarSuspensao(Cabina $cabina) {
 		$verificacoes = array();
 		if(!$cabina->isAtron()) {
-			$posicoesDosApertos = PosicaoDosApertos::getPosicaoDosApertos($cabina);
+			$rangeDeApertos = Apertos::getRangeDeApertos($cabina);
 			
-			for($i = 0; $i < PosicaoDosApertos::QTD_POSICOES_APERTOS_SUSP; $i++)
-				array_push($verificacoes, $this->confirmar($cabina, $posicoesDosApertos[$i]));
+			for($i = 0; $i < Apertos::QTD_TIPOS_SUSPENSAO; $i++)
+				array_push($verificacoes, $this->confirmar($cabina, $rangeDeApertos[$i]));
 			
 			if(!in_array(Constantes::NEGACAO, $verificacoes))
 				$cabina->getItemDeVerificacao()->setSuspensao(Constantes::CONFIRMACAO);
@@ -139,17 +130,21 @@ class VerificadorDeItensPorCabina {
 		return $this->verificarSuspensaoAxorFL6($cabina, $verificacoes);
 	}
 
-	// TODO Estudar utilizar o algoritimo deste método para as verificações de apertos de suspensão
+	/**
+	 * Utiliza a mesma lógica do método  @see verificarSuspensao
+	 */
 	private function verificarSuspensaoAxorFL6(Cabina $cabina, array $verificacoes) {
 		if($cabina->isAxor() && !in_array(Constantes::CONFIRMACAO, $verificacoes)) {
-			$posicaoDosApertos = array_slice($cabina->getConfirmacoesDosApertos(), 10, 4);
+			$posicaoInicial = Apertos::POSICAO_INICIAL_ARRAY_SUSP_AXOR_FL6;
+			$qtdApertos = Apertos::QTD_TIPOS_SUSPENSAO;
+			$rangeDeApertos = array_slice($cabina->getConfirmacoesDosApertos(), $posicaoInicial, $qtdApertos);
 			$confirmacoes = array();
-			$confirmacoes = array_keys($posicaoDosApertos, Constantes::CONFIRMACAO);
+			$confirmacoes = array_keys($rangeDeApertos, Constantes::CONFIRMACAO);
 			$qtdConfirmacoes = count($confirmacoes);
 			
-			if($qtdConfirmacoes === 4)
+			if($qtdConfirmacoes === $qtdApertos)
 				$cabina->getItemDeVerificacao()->setSuspensao(Constantes::CONFIRMACAO);
-			else if($qtdConfirmacoes < 4 && $qtdConfirmacoes > 0)
+			else if($qtdConfirmacoes < $qtdApertos && $qtdConfirmacoes > 0)
 				$cabina->getItemDeVerificacao()->setSuspensao(Constantes::NEGACAO);
 			else
 				$cabina->getItemDeVerificacao()->setSuspensao(Constantes::CONFERIR);
@@ -158,10 +153,8 @@ class VerificadorDeItensPorCabina {
 	}
 
 	private function verificarPedalAtron(Cabina $cabina) {
-		if($cabina->isAtron()) {
-			$posicaoDoApertoNoArray = 1;
-			$cabina->getItemDeVerificacao()->setPedalAtron($this->confirmar($cabina, $posicaoDoApertoNoArray));
-		}
+		if($cabina->isAtron())
+			$cabina->getItemDeVerificacao()->setPedalAtron($this->confirmar($cabina, Apertos::POSICAO_PEDAL_ATRON));
 		return $cabina;
 	}
 
