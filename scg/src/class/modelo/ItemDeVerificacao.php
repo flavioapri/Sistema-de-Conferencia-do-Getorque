@@ -1,5 +1,4 @@
 <?php
-require_once 'src/class/constantes/Constantes.php';
 
 class ItemDeVerificacao {
 	private $cruzeta;
@@ -31,7 +30,7 @@ class ItemDeVerificacao {
 	}
 
 	public function imprimir($baumuster) {
-		if($baumuster === Constantes::ATRON)
+		if($baumuster === Baumuster::ATRON)
 			return $this->cruzeta . "\t" . $this->pedalAtron;
 		return $this->cruzeta . "\t" . $this->caboMassa . "\t" . $this->valvulaNTC . "\t" . $this->valvulaLTC . "\t" .
 			$this->consoleLTC . "\t" . $this->pedaleiraAxor . "\t" . $this->cilindro . "\t" . $this->preSuspensao .

@@ -1,5 +1,5 @@
 <?php
-require_once '../src/class/Cabina.php';
+require_once 'vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
 

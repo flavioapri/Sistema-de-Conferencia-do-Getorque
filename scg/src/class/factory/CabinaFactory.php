@@ -1,6 +1,4 @@
 <?php
-require_once 'src/class/modelo/Cabina.php';
-require_once 'src/class/constantes/Constantes.php';
 
 /**
  * Classe geradora de cabinas para os testes.
@@ -19,7 +17,7 @@ class CabinaFactory {
 		$this->confirmacoesDosApertos = $this->geraArrayApertos();
 		$this->cabina->setConfirmacoesDosApertos($this->confirmacoesDosApertos);
 		
-		if(func_get_arg(1) === Constantes::FL6)
+		if(func_get_arg(1) === Code::FL6)
 			$this->cabina->setConfirmacoesDosApertos($this->modificarApertosParaFL6());
 		
 		return $this->cabina;
@@ -28,7 +26,7 @@ class CabinaFactory {
 	private function geraArrayApertos() {
 		$confirmacoesDosApertos = array();
 		for($i = 0; $i < 18; $i++)
-			array_push($confirmacoesDosApertos, Constantes::CONFIRMACAO);
+			array_push($confirmacoesDosApertos, Anotacao::CONFIRMACAO);
 		return $confirmacoesDosApertos;
 	}
 
@@ -40,7 +38,7 @@ class CabinaFactory {
 		for($i = 0; $i <= 17; $i++) {
 			foreach($posicoesDeApertosNaoFL6 as $posicao) {
 				if($i === $posicao)
-					$this->confirmacoesDosApertos[$i] = Constantes::NEGACAO;
+					$this->confirmacoesDosApertos[$i] = Anotacao::NEGACAO;
 			}
 		}
 		return $this->confirmacoesDosApertos;

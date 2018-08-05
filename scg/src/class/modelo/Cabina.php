@@ -1,7 +1,5 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
-require_once 'src/class/modelo/ItemDeVerificacao.php';
-require_once 'src/class/constantes/Constantes.php';
 
 class Cabina {
 	private $np;
@@ -47,8 +45,7 @@ class Cabina {
 
 	function __toString() {
 		return $this->np . "\t" . $this->baumuster . "\t" . $this->fz . "\t" . $this->pais . "\t" .
-			$this->denominacao . "\t" . $this->cor . "\t" . "\n" . "\t" .
-			$this->itemDeVerificacao->imprimir($this->baumuster);
+			$this->denominacao . "\t" . $this->cor . "\t" . $this->itemDeVerificacao->imprimir($this->baumuster);
 	}
 
 	public function getNp() {
@@ -124,25 +121,25 @@ class Cabina {
 	}
 
 	public function isAxor() {
-		if($this->baumuster === Constantes::AXOR_C || $this->baumuster === Constantes::AXOR_R)
+		if($this->baumuster === Baumuster::AXOR_C || $this->baumuster === Baumuster::AXOR_R)
 			return true;
 		return false;
 	}
 
 	public function isAtego() {
-		if($this->baumuster === Constantes::ATEGO)
+		if($this->baumuster === Baumuster::ATEGO)
 			return true;
 		return false;
 	}
 
 	public function isAccelo() {
-		if($this->baumuster === Constantes::ACCELO)
+		if($this->baumuster === Baumuster::ACCELO)
 			return true;
 		return false;
 	}
 
 	public function isAtron() {
-		if($this->baumuster === Constantes::ATRON)
+		if($this->baumuster === Baumuster::ATRON)
 			return true;
 		return false;
 	}
@@ -156,8 +153,8 @@ class Cabina {
 	public function setConfirmacoesDosApertos($confirmacoesDosApertos) {
 		$this->confirmacoesDosApertos = $confirmacoesDosApertos;
 	}
-	
-	public function setVerificacaoDeAperto($posicao, $valor){
+
+	public function setVerificacaoDeAperto($posicao, $valor) {
 		$this->confirmacoesDosApertos[$posicao] = $valor;
 	}
 }

@@ -1,5 +1,4 @@
 <?php
-require_once 'src/class/modelo/TipoDeAperto.php';
 
 class TipoDeApertoDAO {
 	private $conexao;

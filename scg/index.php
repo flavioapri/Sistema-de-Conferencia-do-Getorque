@@ -1,21 +1,17 @@
-<?php
-require_once 'src/class/logica/GeradorDeListaDeCabinas.php';
-require_once 'src/class/logica/GeradorDeListaDeRegistroDeApertos.php';
-require_once 'src/class/modelo/RegistroDeAperto.php';
-require_once 'src/class/dao/TipoDeApertoDAO.php';
-require_once 'src/class/modelo/ItemDeVerificacao.php';
-require_once 'src/class/logica/ConferenteDeRegistrosDeAperto.php';
-require_once 'src/conecta.php';
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sistema de Conferência do GeTorque</title>
+</head>
+<body>
+	<h1>Sistema de Conferência do GeTorque</h1>
 
-$listaDeCabinas = GeradorDeListaDeCabinas::gerar();
-
-$listaDeRegistrosDeAperto = GeradorDeListaDeRegistroDeApertos::gerar();
-
-$tiposDeApertoDAO = new TipoDeApertoDAO($conexao);
-
-$tiposDeAperto = $tiposDeApertoDAO->listarTiposDeApertoComBaumuster();
-
-$conferente = new ConferenteDeRegistrosDeAperto();
-
-$conferente->conferir($listaDeCabinas, $listaDeRegistrosDeAperto, $tiposDeAperto);
+	<form action="recebe_envio.php" method="post"
+		enctype="multipart/form-data">
+		<input type="file" name="arquivos[]" multiple> <br /> <input
+			type="submit" value="Enviar">
+	</form>
+</body>
+</html>
 

@@ -4,7 +4,7 @@ class TipoDeAperto {
 	private $processo;
 	private $qtdApertos;
 	private $baumuster;
-
+	
 	function __construct($nome, $processo, $qtdApertos, $baumuster) {
 		$this->nome = trim(utf8_encode($nome));
 		$this->processo = trim(utf8_encode($processo));

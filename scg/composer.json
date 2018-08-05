@@ -1,0 +1,21 @@
+{
+	"name" : "Sistema de Conferencia do GeTorque",
+	"authors" : [{
+			"name" : "Flavio",
+			"email" : "contato@flavioar.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"" : [
+				"src",
+				"src/class",
+				"src/class/constantes",
+				"src/class/dao",
+				"src/class/factory",
+				"src/class/logica",
+				"src/class/modelo"
+			]
+		}
+	}
+}

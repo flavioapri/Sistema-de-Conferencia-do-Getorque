@@ -1,6 +1,4 @@
 <?php
-require_once 'src/class/modelo/Cabina.php';
-require_once 'src/class/constantes/Constantes.php';
 
 class Apertos {
 	const POSICAO_SUSP_FRONTAL_ATEGO_LE = 4;
@@ -51,21 +49,21 @@ class Apertos {
 		 * Foi usada esta implementação para não ter de se criar outro método especifico para casos de cabinas
 		 * FL6.
 		 */
-		if(func_num_args() === 2 && func_get_arg(1) === Constantes::FL6)
+		if(func_num_args() === 2 && func_get_arg(1) === Code::FL6)
 			return array(self::POSICAO_SUSP_INTERNA_AXOR_FL6_LE, self::POSICAO_SUSP_INTERNA_AXOR_FL6_LD,
 						self::POSICAO_SUSP_FRONTAL_AXOR_FL6_LE, self::POSICAO_SUSP_FRONTAL_AXOR_FL6_LD);
 		
 		switch($cabina->getBaumuster()) {
-			case Constantes::ATEGO :
+			case Baumuster::ATEGO :
 				return array(self::POSICAO_SUSP_FRONTAL_ATEGO_LE, self::POSICAO_SUSP_FRONTAL_ATEGO_LD,
 							self::POSICAO_SUSP_INTERNA_ATEGO_LE, self::POSICAO_SUSP_INTERNA_ATEGO_LD);
-			case Constantes::AXOR_R :
+			case Baumuster::AXOR_R :
 				return array(self::POSICAO_SUSP_INTERNA_AXOR_LE, self::POSICAO_SUSP_INTERNA_AXOR_LD,
 							self::POSICAO_SUSP_FRONTAL_AXOR_LE, self::POSICAO_SUSP_FRONTAL_AXOR_LD);
-			case Constantes::AXOR_C :
+			case Baumuster::AXOR_C :
 				return array(self::POSICAO_SUSP_INTERNA_AXOR_LE, self::POSICAO_SUSP_INTERNA_AXOR_LD,
 							self::POSICAO_SUSP_FRONTAL_AXOR_LE, self::POSICAO_SUSP_FRONTAL_AXOR_LD);
-			case Constantes::ACCELO :
+			case Baumuster::ACCELO :
 				return array(self::POSICAO_SUSP_FRONTAL_ACCELO_LE, self::POSICAO_SUSP_FRONTAL_ACCELO_LD,
 							self::POSICAO_SUSP_INTERNA_ACCELO_LE, self::POSICAO_SUSP_INTERNA_ACCELO_LD);
 		}
